@@ -1498,7 +1498,7 @@ export class DataTable {
                     [`text-${this.density}`]: this.notDefaultDensity(),
                   }}
                 >
-                  {this.isObject(cell) && columnProps?.dataType !== "date" ? (
+                  {this.isObject(cell) && columnProps?.dataType ? (
                     Object.keys(cell).includes("href") ? (
                       <ic-link
                         href={cellValue("href")}
